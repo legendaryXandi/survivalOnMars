@@ -36,7 +36,6 @@ public class VRGaze : MonoBehaviour
 			}
 			if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Rotate") && gvrStatus)
 			{
-				Debug.Log("inside if");
 				_hit.transform.gameObject.GetComponent<rotateCube>().changeSpin();
 				gvrStatus = false;
 			}
