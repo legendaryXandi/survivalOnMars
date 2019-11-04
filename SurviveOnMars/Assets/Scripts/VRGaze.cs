@@ -30,13 +30,13 @@ public class VRGaze : MonoBehaviour
 		
 		Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 		if(Physics.Raycast(ray,out _hit, distanceOfRay)){
-			if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Teleport"))
-			{
+			if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Teleport")){
 				_hit.transform.gameObject.GetComponent<teleport>().teleportPlayer();
-			}
-			if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Rotate") && gvrStatus)
-			{
+			} else if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Rotate") && gvrStatus){
 				_hit.transform.gameObject.GetComponent<rotateCube>().changeSpin();
+				gvrStatus = false;
+			} else if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("OpenDoor") && gvrStatus){
+				_hit.transform.gameObject.GetComponent<openDoor>().activateMovement();
 				gvrStatus = false;
 			}
 		}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Teleport
   - Rotate
+  - OpenDoor
   layers:
   - Default
   - TransparentFX
