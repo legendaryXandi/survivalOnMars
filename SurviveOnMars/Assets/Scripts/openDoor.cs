@@ -18,9 +18,9 @@ public class openDoor : MonoBehaviour
 			door.transform.Translate(0,0.015f,0);
 			alreadyTranslated += 0.015f;
 			if(!audioPlayed){
-				audioSourceButton.Play(0);
-				audioSourceLift.Play(1);
-				audioSourceWind.Play(4);
+				audioSourceButton.PlayDelayed(0);
+				audioSourceLift.PlayDelayed(0.2f);
+				audioSourceWind.PlayDelayed(3);
 				audioPlayed = true;
 			}
 		} else{

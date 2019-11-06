@@ -11,7 +11,7 @@ public class VRGaze : MonoBehaviour
 	bool gvrStatus;
 	float gvrTimer;
 	
-	public int distanceOfRay = 10;
+	public int distanceOfRay = 100;
 	private RaycastHit _hit;
 	
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class VRGaze : MonoBehaviour
 		Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 		if(Physics.Raycast(ray,out _hit, distanceOfRay)){
 			if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Teleport")){
+							Debug.Log("invoking teleporting");
 				_hit.transform.gameObject.GetComponent<teleport>().teleportPlayer();
 			} else if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Rotate") && gvrStatus){
 				_hit.transform.gameObject.GetComponent<rotateCube>().changeSpin();
