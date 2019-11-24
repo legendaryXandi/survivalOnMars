@@ -39,6 +39,9 @@ public class VRGaze : MonoBehaviour
 			} else if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("OpenDoor") && gvrStatus){
 				_hit.transform.gameObject.GetComponent<openDoor>().activateMovement();
 				gvrStatus = false;
+			} else if(imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Respawn") && gvrStatus){
+				_hit.transform.gameObject.GetComponent<respawn>().backToMainMenu();
+				gvrStatus = false;
 			}
 		}
     }
