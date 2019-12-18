@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class pickUpWalki : MonoBehaviour
 {
 	
 	private OVRGrabbable ovrGrabbable;
-	private OVRInput.Button buttonA;
-	public GameObject text;
+	public Text walkiText;
+	private bool walkiStored;
 	
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,14 @@ public class pickUpWalki : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ovrGrabbable.isGrabbed){
-			text.SetActive(true);
+        if(!walkiStored && ovrGrabbable.isGrabbed){
+			walkiText.text = "Press 'A' to store";
+			if(OVRInput.Get(OVRInput.Button.One)){
+				walkiText.text = "";
+				walkiStored = true;
+			}
+		} else if(!walkiStored && !ovrGrabbable.isGrabbed){
+			walkiText.text = "Pick me up!";
 		}
     }
 }
