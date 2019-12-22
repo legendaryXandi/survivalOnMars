@@ -9,6 +9,7 @@ public class doorOpener : MonoBehaviour
 	private bool doorHasBeenOpened;
 	
 	public AudioSource audioData;
+	public AudioSource audioData2;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +18,7 @@ public class doorOpener : MonoBehaviour
 			if(transform.position.y < 5.75f && !doorIsOpening){
 				doorIsOpening = true;
 				audioData.Play(2);
+				audioData2.Play(3);
 			}
 			if(doorIsOpening){
 				door.transform.Translate(Vector3.up*Time.deltaTime*3);
