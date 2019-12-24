@@ -10,6 +10,7 @@ public class pickUpWalki : MonoBehaviour
 	public Text walkiText;
 	private bool walkiStored;
 	public GameObject player;
+	public AudioSource audioData;
 	Vector3 position;
 	Rigidbody rigidbody;
 	
@@ -29,6 +30,7 @@ public class pickUpWalki : MonoBehaviour
 			if(OVRInput.Get(OVRInput.Button.One)){
 				walkiText.text = "";
 				walkiStored = true;
+				audioData.Play();
 			}
 		} else if(!walkiStored && !ovrGrabbable.isGrabbed){
 			walkiText.text = "Pick me up!";

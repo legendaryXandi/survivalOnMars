@@ -11,7 +11,6 @@ public class labOpener : MonoBehaviour
 	public AudioSource audioData2;
 	
 	void Update(){
-		Debug.Log(door.transform.position.x);
 		if(!isOpen){
 			if(!doorIsOpening && transform.position.z > 777.3200f){
 				audioData.Play();
