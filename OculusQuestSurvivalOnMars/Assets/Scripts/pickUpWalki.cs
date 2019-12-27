@@ -13,6 +13,7 @@ public class pickUpWalki : MonoBehaviour
 	public AudioSource audioData;
 	Vector3 position;
 	Rigidbody rigidbody;
+	public GameObject walkieImage;
 	
     // Start is called before the first frame update
     void Start()
@@ -31,13 +32,14 @@ public class pickUpWalki : MonoBehaviour
 				walkiText.text = "";
 				walkiStored = true;
 				audioData.Play();
+				walkieImage.SetActive(true);
 			}
 		} else if(!walkiStored && !ovrGrabbable.isGrabbed){
 			walkiText.text = "Pick me up!";
 		} else if(walkiStored){
 			position.x = player.transform.position.x;
-			position.y = player.transform.position.y + 0.3f;
-			position.z = player.transform.position.z - 0.3f;
+			position.y = player.transform.position.y;
+			position.z = player.transform.position.z;
 			transform.position = position;
 			transform.parent = player.transform;
 			rigidbody.isKinematic = true;
