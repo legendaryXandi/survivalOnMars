@@ -17,7 +17,7 @@ public class showHUD : MonoBehaviour
 	
 	void OnTriggerEnter(){
 		canvas.SetActive(true);
-		oxygenSlider.GetComponent<Slider>().SetValueWithoutNotify(100f);
-		radiationSlider.GetComponent<Slider>().SetValueWithoutNotify(0f);
+		oxygenSlider.GetComponent<Slider>().value = 100f;
+		radiationSlider.GetComponent<Slider>().value = 0f;
 	}
 }
