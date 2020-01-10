@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class solarMachine : MonoBehaviour
+{
+	public AudioSource audioData;
+	public GameObject light;
+	
+	private int count = 0;
+	
+	private void startMachine(){
+		audioData.Play();
+		light.GetComponent<Light>().color = Color.green;
+	}
+	
+	public void switchActivated(){
+		count++;
+		if(count == 5){
+			startMachine();
+		}
+	}
+}

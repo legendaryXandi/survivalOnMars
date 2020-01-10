@@ -25,10 +25,13 @@ public class plantAnalyser : MonoBehaviour
 	public GameObject toxic;
 	public GameObject edible;
 	
+	private GameObject[] plants;
+	
     void Start(){
 		defaultPositionY = transform.position.y - 0.0001f;
-		nrOfAttemptsToSucceed = Random.Range(3,6);
+		nrOfAttemptsToSucceed = Random.Range(2,5);
 		Debug.Log(nrOfAttemptsToSucceed);
+		plants = GameObject.FindGameObjectsWithTag("plant");
 	}
 	
     void Update(){
@@ -68,6 +71,9 @@ public class plantAnalyser : MonoBehaviour
 			finished = true;
 			edible.SetActive(true);
 			audioData3.Play();
+			foreach (GameObject plant in plants){
+				plant.GetComponent<pickUpPlant>().setAnalyzed(true);
+			}
 		}else{
 			toxic.SetActive(true);
 			audioData2.Play();

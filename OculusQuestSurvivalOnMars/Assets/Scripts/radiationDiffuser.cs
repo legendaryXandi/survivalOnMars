@@ -22,9 +22,9 @@ public class radiationDiffuser : MonoBehaviour
 	private bool finished;
 	private bool pushed;
 	
-	public GameObject noPlant;
-	public GameObject analyzing;
-	public GameObject toxic;
+	public GameObject defuser;
+	public GameObject defusing;
+	public GameObject defused;
 	public GameObject edible;
 	
 	public GameObject steam;
@@ -43,12 +43,16 @@ public class radiationDiffuser : MonoBehaviour
 				audioData.Play();
 				pushed = true;
 				radiationSlider.GetComponent<Slider>().radiationIncrease = -2f;
+				defuser.SetActive(false);
+				defusing.SetActive(true);
 			}
 			
 			if(pushed && currentValue <= 0.001f){
 				particleSystem.Stop();
 				radiationSlider.GetComponent<Slider>().radiationIncrease = 0.35f;
 				finished = true;
+				defusing.SetActive(false);
+				defused.SetActive(true);
 			}
 		}
 	}

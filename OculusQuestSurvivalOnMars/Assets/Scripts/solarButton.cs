@@ -14,7 +14,7 @@ public class solarButton : MonoBehaviour
 	public AudioSource audioData3;
 	
 	private float activationPositionY = 6.157f;
-	private float activationPositionX = 310.6280f;
+	private float activationPositionX = 310.6308f;
 	private bool plantPositioned;
 	private int nrOfAttemptsToSucceed;
 	private int nrOfAttempts;
@@ -35,17 +35,19 @@ public class solarButton : MonoBehaviour
 	public GameObject buttonOn;
 	public GameObject buttonOff;
 	
+	private GameObject solarMachine;
+	
     void Start(){
-
+		solarMachine = GameObject.FindGameObjectWithTag("solarMachine");
 	}
 	
     void Update(){
-		Debug.Log(transform.position.x);
 		if(!finished){
 			if(transform.position.x <= activationPositionX){
 				buttonOn.GetComponent<Renderer>().material = buttonOnNewMaterial;
 				buttonOff.GetComponent<Renderer>().material = buttonOffNewMaterial;
 				audioData.Play();
+				solarMachine.GetComponent<solarMachine>().switchActivated();
 				finished = true;
 			}
 		}

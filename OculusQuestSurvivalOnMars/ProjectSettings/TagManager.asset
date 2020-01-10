@@ -11,6 +11,8 @@ TagManager:
   - doorOutside
   - doorOutsideCloser
   - corridor
+  - solarMachine
+  - plant
   layers:
   - Default
   - TransparentFX
