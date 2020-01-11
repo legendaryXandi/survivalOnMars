@@ -42,7 +42,7 @@ public class radiationDiffuser : MonoBehaviour
 				particleSystem.Play();
 				audioData.Play();
 				pushed = true;
-				radiationSlider.GetComponent<Slider>().radiationIncrease = -2f;
+				radiationSlider.GetComponent<Slider>().radiationIncrease = -3f;
 				defuser.SetActive(false);
 				defusing.SetActive(true);
 			}

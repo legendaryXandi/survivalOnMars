@@ -13,6 +13,9 @@ TagManager:
   - corridor
   - solarMachine
   - plant
+  - HUDRight
+  - sandStormStrong
+  - sandStormWeak
   layers:
   - Default
   - TransparentFX
