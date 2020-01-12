@@ -6,12 +6,16 @@ public class solarMachine : MonoBehaviour
 {
 	public AudioSource audioData;
 	public GameObject light;
+	public GameObject electricity;
+	public GameObject electricityDefault;
 	
 	private int count = 0;
 	
 	private void startMachine(){
 		audioData.Play();
 		light.GetComponent<Light>().color = Color.green;
+		electricityDefault.SetActive(false);
+		electricity.SetActive(true);
 	}
 	
 	public void switchActivated(){

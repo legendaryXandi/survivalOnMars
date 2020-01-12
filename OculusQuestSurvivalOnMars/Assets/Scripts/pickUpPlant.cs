@@ -13,6 +13,7 @@ public class pickUpPlant : MonoBehaviour
 	Vector3 position;
 	Rigidbody rigidbody;
 	public GameObject plantImage;
+	public GameObject plantDefault;
 	
 	private bool isAnalyzedPositive;
 	private GameObject[] plants;
@@ -37,6 +38,7 @@ public class pickUpPlant : MonoBehaviour
 					plantStored = true;
 					//audioData.Play();
 					plantImage.SetActive(true);
+					plantDefault.SetActive(false);
 				}
 			} else if(!plantStored && !ovrGrabbable.isGrabbed){
 				plantText.text = "";

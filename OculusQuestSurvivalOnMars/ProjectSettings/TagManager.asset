@@ -16,6 +16,7 @@ TagManager:
   - HUDRight
   - sandStormStrong
   - sandStormWeak
+  - introText
   layers:
   - Default
   - TransparentFX

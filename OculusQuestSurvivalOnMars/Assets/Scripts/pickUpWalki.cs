@@ -37,12 +37,12 @@ public class pickUpWalki : MonoBehaviour
 		} else if(!walkiStored && !ovrGrabbable.isGrabbed){
 			walkiText.text = "Pick me up!";
 		} else if(walkiStored){
-			/*position.x = player.transform.position.x;
+			position.x = player.transform.position.x;
 			position.y = player.transform.position.y;
 			position.z = player.transform.position.z;
 			transform.position = position;
 			transform.parent = player.transform;
-			rigidbody.isKinematic = true;*/
+			rigidbody.isKinematic = true;
 			gameObject.GetComponent<Renderer>().enabled=false;
 		}
     }

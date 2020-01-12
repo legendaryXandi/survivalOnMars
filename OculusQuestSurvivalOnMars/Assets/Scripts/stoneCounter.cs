@@ -9,6 +9,7 @@ public class stoneCounter : MonoBehaviour
 	public GameObject stoneImage1;
 	public GameObject stoneImage2;
 	public GameObject stoneImage3;
+	public GameObject stoneDefault;
 	
 	public void stoneStored(){
 		counter++;
@@ -19,6 +20,7 @@ public class stoneCounter : MonoBehaviour
 			stoneImage2.SetActive(true);
 		}else if(counter == 3){
 			stoneImage2.SetActive(false);
+			stoneDefault.SetActive(false);
 			stoneImage3.SetActive(true);
 		}
 	}
