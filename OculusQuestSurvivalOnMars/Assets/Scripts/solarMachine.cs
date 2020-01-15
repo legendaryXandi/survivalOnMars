@@ -14,7 +14,7 @@ public class solarMachine : MonoBehaviour
 	
 	private void startMachine(){
 		audioData.Play();
-		audioData.PlayDelayed(2);
+		audioData2.PlayDelayed(2);
 		light.GetComponent<Light>().color = Color.green;
 		electricityDefault.SetActive(false);
 		electricity.SetActive(true);
