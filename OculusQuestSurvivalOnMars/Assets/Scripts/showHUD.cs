@@ -7,13 +7,8 @@ public class showHUD : MonoBehaviour
 {
 	
 	public GameObject canvas;
-	private GameObject oxygenSlider;
-	private GameObject radiationSlider;
-	
-	void Start(){
-		oxygenSlider = GameObject.FindGameObjectWithTag("oxygen");
-		radiationSlider = GameObject.FindGameObjectWithTag("radiation");
-	}
+	public GameObject oxygenSlider;
+	public GameObject radiationSlider;
 	
 	void OnTriggerEnter(){
 		canvas.SetActive(true);

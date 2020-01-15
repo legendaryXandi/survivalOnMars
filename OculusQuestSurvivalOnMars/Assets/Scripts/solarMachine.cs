@@ -5,6 +5,7 @@ using UnityEngine;
 public class solarMachine : MonoBehaviour
 {
 	public AudioSource audioData;
+	public AudioSource audioData2;
 	public GameObject light;
 	public GameObject electricity;
 	public GameObject electricityDefault;
@@ -13,6 +14,7 @@ public class solarMachine : MonoBehaviour
 	
 	private void startMachine(){
 		audioData.Play();
+		audioData.PlayDelayed(2);
 		light.GetComponent<Light>().color = Color.green;
 		electricityDefault.SetActive(false);
 		electricity.SetActive(true);

@@ -17,6 +17,7 @@ TagManager:
   - sandStormStrong
   - sandStormWeak
   - introText
+  - alarm
   layers:
   - Default
   - TransparentFX

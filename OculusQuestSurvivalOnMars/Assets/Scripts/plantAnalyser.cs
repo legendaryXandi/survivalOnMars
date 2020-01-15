@@ -11,6 +11,7 @@ public class plantAnalyser : MonoBehaviour
 	public AudioSource audioData;
 	public AudioSource audioData2;
 	public AudioSource audioData3;
+	public AudioSource audioData4;
 	
 	private float activationPosition = 5.462f;
 	private bool plantPositioned;
@@ -71,6 +72,7 @@ public class plantAnalyser : MonoBehaviour
 			finished = true;
 			edible.SetActive(true);
 			audioData3.Play();
+			audioData4.Play();
 			foreach (GameObject plant in plants){
 				plant.GetComponent<pickUpPlant>().setAnalyzed(true);
 			}
