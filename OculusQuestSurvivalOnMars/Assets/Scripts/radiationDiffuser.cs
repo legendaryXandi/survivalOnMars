@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class radiationDiffuser : MonoBehaviour
 {
-    private float defaultPositionY = 6.158f;
-	private float defaultPositionX = 431.612f;
+    private float defaultPositionY;
+	private float defaultPositionX;
 	public Material defaultMaterial;
 	public Material newMaterial;
 	public AudioSource audioData;
 	public AudioSource audioData2;
 	public AudioSource audioData3;
 	
-	private float activationPositionY = 6.157f;
-	private float activationPositionX = 431.608f;
+	private float activationPositionY;
+	private float activationPositionX;
 	private bool plantPositioned;
 	private int nrOfAttemptsToSucceed;
 	private int nrOfAttempts;
@@ -34,11 +34,13 @@ public class radiationDiffuser : MonoBehaviour
 	
     void Start(){
 		particleSystem = steam.GetComponent(typeof(ParticleSystem)) as ParticleSystem;
+		defaultPositionX = transform.position.x;
+		defaultPositionY = transform.position.y;
 	}
 	
     void Update(){
 		if(!finished){
-			if(!pushed && transform.position.x <= activationPositionX && transform.position.y <= activationPositionY){
+			if(!pushed && transform.position.x <= defaultPositionX - 0.005f && transform.position.y <= defaultPositionY - 0.005f){
 				particleSystem.Play();
 				audioData.Play();
 				pushed = true;
