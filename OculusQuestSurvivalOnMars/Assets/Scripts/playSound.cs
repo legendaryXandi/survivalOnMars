@@ -6,11 +6,19 @@ public class playSound : MonoBehaviour
 {
 	public AudioSource audioData;
 	private bool alreadyPlayedSound;
+	public bool afterPlant;
 
     void OnTriggerEnter(){
 		if(!alreadyPlayedSound){
-			audioData.Play();
-			alreadyPlayedSound = true;
+			if(afterPlant){
+				if(GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().greenHouseFinished){
+					audioData.Play();
+					alreadyPlayedSound = true;
+				}
+			}else{
+				audioData.Play();
+				alreadyPlayedSound = true;
+			}
 		}
 	}
 }

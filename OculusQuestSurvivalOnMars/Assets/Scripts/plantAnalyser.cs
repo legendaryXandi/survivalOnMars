@@ -26,6 +26,9 @@ public class plantAnalyser : MonoBehaviour
 	public GameObject toxic;
 	public GameObject edible;
 	
+	public GameObject oldToDo;
+	public GameObject newToDo;
+	
 	private GameObject[] plants;
 	
     void Start(){
@@ -76,6 +79,10 @@ public class plantAnalyser : MonoBehaviour
 			foreach (GameObject plant in plants){
 				plant.GetComponent<pickUpPlant>().setAnalyzed(true);
 			}
+			oldToDo.SetActive(false);
+			newToDo.SetActive(true);
+			GameObject.FindGameObjectWithTag("nextToDoSound").GetComponent<AudioSource>().Play();
+			GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().greenHouseFinished = true;
 		}else{
 			toxic.SetActive(true);
 			audioData2.Play();

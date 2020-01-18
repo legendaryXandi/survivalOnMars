@@ -17,6 +17,7 @@ public class doorOpener : MonoBehaviour
 	
 	public GameObject oxygenSlider;
 	public GameObject radiationSlider;
+	private bool moveNow;
 	
 	void Start(){
 		defaultPositionZ = transform.position.z;
@@ -29,30 +30,32 @@ public class doorOpener : MonoBehaviour
 				audioData.Play();
 				audioData2.Play();
 				door.GetComponent<doorState>().isMoving = true;
+				moveNow = true;
 			}			
-		}else{
+		}else if(moveNow){
 			if(!door.GetComponent<doorState>().isOpen){
 				door.transform.Translate(Vector3.up*Time.deltaTime*3);
 				if(door.transform.position.y >= 12.45f){
+					Debug.Log("should change material");
 					door.GetComponent<doorState>().isOpen = true;
 					door.GetComponent<doorState>().isMoving = false;
+					GetComponent<Renderer>().material = openedMaterial;
+					oxygenSlider.GetComponent<Slider>().doorClosed = false;
+					radiationSlider.GetComponent<Slider>().doorClosed = false;
+					moveNow = false;
 				}
 			}else{
 				door.transform.Translate(Vector3.down*Time.deltaTime*3);
 				if(door.transform.position.y <= door.GetComponent<doorState>().defaultPositionY){
+					Debug.Log("should change material");
 					door.GetComponent<doorState>().isOpen = false;
 					door.GetComponent<doorState>().isMoving = false;
+					GetComponent<Renderer>().material = closedMaterial;
+					oxygenSlider.GetComponent<Slider>().doorClosed = true;
+					radiationSlider.GetComponent<Slider>().doorClosed = true;
+					moveNow = false;
 				}
 			}
-		}
-		if(!door.GetComponent<doorState>().isOpen){
-			GetComponent<Renderer>().material = closedMaterial;
-			oxygenSlider.GetComponent<Slider>().doorClosed = true;
-			radiationSlider.GetComponent<Slider>().doorClosed = true;
-		}else{
-			GetComponent<Renderer>().material = openedMaterial;
-			oxygenSlider.GetComponent<Slider>().doorClosed = false;
-			radiationSlider.GetComponent<Slider>().doorClosed = true;
 		}
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class pickUpSpaceSuit : MonoBehaviour
+public class pickUpOxygen : MonoBehaviour
 {
- 	
-	private OVRGrabbable ovrGrabbable;
+    private OVRGrabbable ovrGrabbable;
 	public Text plantText;
 	private bool plantStored;
 	public GameObject plantImage;
 	public AudioSource audioData;
 	public AudioSource audioData2;
+	public GameObject oxygenSlider;
 	
 	public GameObject oldToDo;
 	public GameObject newToDo;
@@ -26,17 +26,14 @@ public class pickUpSpaceSuit : MonoBehaviour
     void Update()
     {
 		if(!plantStored && ovrGrabbable.isGrabbed){
-			plantText.text = "Press 'A' to store";
+			plantText.text = "Press 'A' to refill oxygen";
 			if(OVRInput.Get(OVRInput.Button.One)){
 				plantText.text = "";
 				plantStored = true;
-				audioData.Play();
-				audioData2.Play();
-				oldToDo.SetActive(false);
-				newToDo.SetActive(true);
+				oxygenSlider.GetComponent<Slider>().value = 100f;
 			}
 		} else if(!plantStored && !ovrGrabbable.isGrabbed){
-			plantText.text = "Pick me up!";
+			plantText.text = "";
 		} else if(plantStored){
 			gameObject.SetActive(false);
 		}

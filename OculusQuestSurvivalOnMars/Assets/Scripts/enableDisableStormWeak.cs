@@ -6,25 +6,26 @@ public class enableDisableStormWeak : MonoBehaviour
 {
 	
 	private GameObject[] storms;
-	public bool stormIsActivated;
+	private GameObject player;
 	
     // Start is called before the first frame update
     void Start()
     {
         storms = GameObject.FindGameObjectsWithTag("sandStormWeak");
+		player = GameObject.FindGameObjectWithTag("player");
     }
 	
 	void OnTriggerEnter(){
-		if(stormIsActivated){
+		if(player.GetComponent<playerState>().stormIsActivated){
 			foreach (GameObject storm in storms){
 				storm.GetComponent<ParticleSystem>().Stop();
 			}
-			stormIsActivated = false;
+			player.GetComponent<playerState>().stormIsActivated = false;
 		} else{
 			foreach (GameObject storm in storms){
 				storm.GetComponent<ParticleSystem>().Play();
 			}
-			stormIsActivated = true;
+			player.GetComponent<playerState>().stormIsActivated = true;
 		}
 	}
 }

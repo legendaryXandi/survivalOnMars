@@ -18,6 +18,10 @@ TagManager:
   - sandStormWeak
   - introText
   - alarm
+  - player
+  - nextToDoSound
+  - leafFinished
+  - stoneFinished
   layers:
   - Default
   - TransparentFX

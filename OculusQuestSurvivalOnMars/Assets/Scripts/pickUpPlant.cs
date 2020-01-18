@@ -39,6 +39,7 @@ public class pickUpPlant : MonoBehaviour
 					//audioData.Play();
 					plantImage.SetActive(true);
 					plantDefault.SetActive(false);
+					GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().greenHouseFinished = true;
 				}
 			} else if(!plantStored && !ovrGrabbable.isGrabbed){
 				plantText.text = "";

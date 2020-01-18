@@ -11,10 +11,8 @@ public class toggleInsideOutside : MonoBehaviour
 	void OnTriggerEnter(){
 		if(oxygenSlider.GetComponent<Slider>().inside){
 			oxygenSlider.GetComponent<Slider>().inside = false;
-			radiationSlider.GetComponent<Slider>().inside = false;
 		}else{
 			oxygenSlider.GetComponent<Slider>().inside = true;
-			radiationSlider.GetComponent<Slider>().inside = true;
 		}
 	}
 	
