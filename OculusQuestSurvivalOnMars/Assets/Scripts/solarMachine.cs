@@ -10,6 +10,9 @@ public class solarMachine : MonoBehaviour
 	public GameObject electricity;
 	public GameObject electricityDefault;
 	
+	public GameObject oldToDo;
+	public GameObject newToDo;
+	
 	private int count = 0;
 	
 	private void startMachine(){
@@ -18,6 +21,10 @@ public class solarMachine : MonoBehaviour
 		light.GetComponent<Light>().color = Color.green;
 		electricityDefault.SetActive(false);
 		electricity.SetActive(true);
+		GameObject.FindGameObjectWithTag("plantsSlider").SetActive(false);
+		oldToDo.SetActive(false);
+		newToDo.SetActive(true);
+		GameObject.FindGameObjectWithTag("nextToDoSound").GetComponent<AudioSource>().Play();
 	}
 	
 	public void switchActivated(){

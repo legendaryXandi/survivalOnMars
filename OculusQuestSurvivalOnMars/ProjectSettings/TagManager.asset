@@ -22,6 +22,7 @@ TagManager:
   - nextToDoSound
   - leafFinished
   - stoneFinished
+  - plantsSlider
   layers:
   - Default
   - TransparentFX
