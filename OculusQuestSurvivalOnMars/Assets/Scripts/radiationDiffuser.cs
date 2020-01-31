@@ -55,6 +55,8 @@ public class radiationDiffuser : MonoBehaviour
 				finished = true;
 				defusing.SetActive(false);
 				defused.SetActive(true);
+				audioData2.Play();
+				audioData3.Play();
 			}
 		}
 	}

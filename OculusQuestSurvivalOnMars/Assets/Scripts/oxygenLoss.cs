@@ -8,6 +8,8 @@ public class oxygenLoss : MonoBehaviour
     public GameObject oxygenSlider;
 	
 	void OnTriggerEnter(){
-		oxygenSlider.GetComponent<Slider>().oxygenLoss = 2.0f;
+		if(GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().powerFinished){
+			oxygenSlider.GetComponent<Slider>().oxygenLoss = 2.0f;
+		}
 	}
 }

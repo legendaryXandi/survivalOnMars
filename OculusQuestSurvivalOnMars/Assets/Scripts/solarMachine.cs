@@ -25,6 +25,7 @@ public class solarMachine : MonoBehaviour
 		oldToDo.SetActive(false);
 		newToDo.SetActive(true);
 		GameObject.FindGameObjectWithTag("nextToDoSound").GetComponent<AudioSource>().Play();
+		GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().powerFinished = true;
 	}
 	
 	public void switchActivated(){

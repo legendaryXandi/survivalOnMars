@@ -37,8 +37,8 @@ public class activateSandStorm : MonoBehaviour
 	}
 	
     void OnTriggerEnter(){
-		if(!alreadyPlayedSound){
-			//audioData.Play();
+		if(!alreadyPlayedSound && GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().powerFinished){
+			audioData.Play();
 			alreadyPlayedSound = true;
 			enteredTrigger = true;
 		}

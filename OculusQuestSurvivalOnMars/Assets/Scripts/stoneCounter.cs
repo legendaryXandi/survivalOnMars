@@ -15,6 +15,8 @@ public class stoneCounter : MonoBehaviour
 	public GameObject newToDo;
 	public GameObject highlighter;
 	
+	public AudioSource audioData;
+	
 	public void stoneStored(){
 		counter++;
 		if(counter == 1){
@@ -29,6 +31,7 @@ public class stoneCounter : MonoBehaviour
 			oldToDo.SetActive(false);
 			newToDo.SetActive(true);
 			highlighter.SetActive(true);
+			audioData.Play();
 			GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().drillingStationFinished = true;
 		}
 	}
