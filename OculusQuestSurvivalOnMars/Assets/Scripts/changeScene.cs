@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+/*
+This class loads the main scene in the background, while displaying the back story on the title screen.
+*/
 public class changeScene : MonoBehaviour
 {
 	private AsyncOperation async;
@@ -25,7 +29,9 @@ public class changeScene : MonoBehaviour
 		}
 	}
 	
-	
+	/*
+	The player has to click through the story before he can start the game.
+	*/
 	public void Update(){
 		if(intro){
 			if(count < textCount){

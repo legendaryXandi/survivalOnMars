@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This class activates the sand storm.
+*/
 public class activateSandStorm : MonoBehaviour
 {
 	
@@ -20,6 +23,9 @@ public class activateSandStorm : MonoBehaviour
 		stormCount = storms.Length;
 	}
 	
+	/*
+	increase fog density over time.
+	*/
 	void Update(){
 		if(enteredTrigger && !fogDensityReached){
 			time += Time.deltaTime;
@@ -36,6 +42,9 @@ public class activateSandStorm : MonoBehaviour
 		}
 	}
 	
+	/*
+	give signal to start with sandstorm
+	*/
     void OnTriggerEnter(){
 		if(!alreadyPlayedSound && GameObject.FindGameObjectWithTag("player").GetComponent<playerState>().powerFinished){
 			audioData.Play();

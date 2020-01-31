@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Always shows the current mission.
+*/
 public class enableDisableTodo : MonoBehaviour
 {
     

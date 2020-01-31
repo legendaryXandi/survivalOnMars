@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This class toggles the wind sound. If the player walks outside the sound starts, if he gets back inside, the sound stops.
+*/
 public class toggleWindSound : MonoBehaviour
 {
     

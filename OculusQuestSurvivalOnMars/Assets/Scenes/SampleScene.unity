@@ -2303,19 +2303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22ad5c8c0d1884c9ef1dfc9f51cd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
   buttonOnNewMaterial: {fileID: 2100000, guid: 516512ec91916504081b7eb533177395, type: 2}
   buttonOffNewMaterial: {fileID: 2100000, guid: c1341de092ef2134e83d9601793e8bb0,
     type: 2}
   audioData: {fileID: 2140758076}
-  audioData2: {fileID: 0}
-  audioData3: {fileID: 0}
-  noPlant: {fileID: 0}
-  analyzing: {fileID: 0}
-  toxic: {fileID: 0}
-  edible: {fileID: 0}
-  steam: {fileID: 0}
-  radiationSlider: {fileID: 0}
   buttonOn: {fileID: 155839287}
   buttonOff: {fileID: 566061646}
 --- !u!1 &51795406
@@ -18483,19 +18474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22ad5c8c0d1884c9ef1dfc9f51cd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
   buttonOnNewMaterial: {fileID: 2100000, guid: 516512ec91916504081b7eb533177395, type: 2}
   buttonOffNewMaterial: {fileID: 2100000, guid: c1341de092ef2134e83d9601793e8bb0,
     type: 2}
   audioData: {fileID: 1877183077}
-  audioData2: {fileID: 0}
-  audioData3: {fileID: 0}
-  noPlant: {fileID: 0}
-  analyzing: {fileID: 0}
-  toxic: {fileID: 0}
-  edible: {fileID: 0}
-  steam: {fileID: 0}
-  radiationSlider: {fileID: 0}
   buttonOn: {fileID: 994385626}
   buttonOff: {fileID: 424634214}
 --- !u!145 &606369622
@@ -18794,19 +18776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22ad5c8c0d1884c9ef1dfc9f51cd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
   buttonOnNewMaterial: {fileID: 2100000, guid: 516512ec91916504081b7eb533177395, type: 2}
   buttonOffNewMaterial: {fileID: 2100000, guid: c1341de092ef2134e83d9601793e8bb0,
     type: 2}
   audioData: {fileID: 72562765}
-  audioData2: {fileID: 0}
-  audioData3: {fileID: 0}
-  noPlant: {fileID: 0}
-  analyzing: {fileID: 0}
-  toxic: {fileID: 0}
-  edible: {fileID: 0}
-  steam: {fileID: 0}
-  radiationSlider: {fileID: 0}
   buttonOn: {fileID: 91201957}
   buttonOff: {fileID: 2066467336}
 --- !u!145 &614222206
@@ -30150,7 +30123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fab9a99e8ea8bd46be454c0208b563b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ovrGrabbable: {fileID: 0}
   plantText: {fileID: 1415987311}
+  plantStored: 0
   plantImage: {fileID: 0}
   audioData: {fileID: 0}
   audioData2: {fileID: 0}
@@ -30651,19 +30626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22ad5c8c0d1884c9ef1dfc9f51cd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
   buttonOnNewMaterial: {fileID: 2100000, guid: 516512ec91916504081b7eb533177395, type: 2}
   buttonOffNewMaterial: {fileID: 2100000, guid: c1341de092ef2134e83d9601793e8bb0,
     type: 2}
   audioData: {fileID: 2101975765}
-  audioData2: {fileID: 0}
-  audioData3: {fileID: 0}
-  noPlant: {fileID: 0}
-  analyzing: {fileID: 0}
-  toxic: {fileID: 0}
-  edible: {fileID: 0}
-  steam: {fileID: 0}
-  radiationSlider: {fileID: 0}
   buttonOn: {fileID: 142865896}
   buttonOff: {fileID: 1456524634}
 --- !u!145 &1017581803
@@ -49775,19 +49741,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f22ad5c8c0d1884c9ef1dfc9f51cd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
   buttonOnNewMaterial: {fileID: 2100000, guid: 516512ec91916504081b7eb533177395, type: 2}
   buttonOffNewMaterial: {fileID: 2100000, guid: c1341de092ef2134e83d9601793e8bb0,
     type: 2}
   audioData: {fileID: 1322918910}
-  audioData2: {fileID: 0}
-  audioData3: {fileID: 0}
-  noPlant: {fileID: 0}
-  analyzing: {fileID: 0}
-  toxic: {fileID: 0}
-  edible: {fileID: 0}
-  steam: {fileID: 0}
-  radiationSlider: {fileID: 0}
   buttonOn: {fileID: 705639000}
   buttonOff: {fileID: 1099124809}
 --- !u!145 &1577893291

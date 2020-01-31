@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Let's the player pick up the space suit, activates new toDos and starts the breathing sound.
+*/
 public class pickUpSpaceSuit : MonoBehaviour
 {
  	

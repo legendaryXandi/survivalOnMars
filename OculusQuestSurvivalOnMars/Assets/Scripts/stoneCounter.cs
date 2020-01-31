@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+This class counts how many stones the player has picked up. If he has picked up 3, the picture in the HUD is complete.
+*/
 public class stoneCounter : MonoBehaviour
 {
 	private int counter;

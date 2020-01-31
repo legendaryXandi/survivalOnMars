@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+This class enables or disables highlighter for the better user experience of the player.
+*/
 public class enableDisableHighlighter : MonoBehaviour
 {
     public GameObject oldHighlighter;

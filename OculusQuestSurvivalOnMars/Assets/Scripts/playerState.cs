@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Holds the current mission state of the player.
+*/
 public class playerState : MonoBehaviour
 {
     public bool greenHouseFinished;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Shows the HUD when the trigger is entered.
+*/
 public class showHUD : MonoBehaviour
 {
 	

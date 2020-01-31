@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+This class represents the plantAnalyzer which randomly decides (between 2 to 5 tries) which plant is edible and which is toxic.
+*/
 public class plantAnalyser : MonoBehaviour
 {
     
@@ -64,6 +68,9 @@ public class plantAnalyser : MonoBehaviour
 		}
 	}
 	
+	/*
+	Let it analyze for 8 seconds.
+	*/
 	private IEnumerator doAnalyzing()
     {
         boolAnalyzing = true;

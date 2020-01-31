@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Enables/disables highlighters after specific events happened in the game
+*/
 public class enableHighlighterAfterPlant : MonoBehaviour
 {
 	public GameObject highlighterPlant;

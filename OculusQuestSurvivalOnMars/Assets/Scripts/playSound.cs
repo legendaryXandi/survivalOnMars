@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Plays a sound when the corresponding trigger is entered.
+*/
 public class playSound : MonoBehaviour
 {
 	public AudioSource audioData;

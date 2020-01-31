@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Let's the player decrease his radiation level once.
+*/
 public class radiationDiffuser : MonoBehaviour
 {
     private float defaultPositionY;

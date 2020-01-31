@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This class is responsible for opening the labDoor, since it only has one button it has other requirements than normal doors.
+*/
 public class labOpener : MonoBehaviour
 {
 	public GameObject door;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Script which starts the machine if all the switches have been activated.
+*/
 public class solarMachine : MonoBehaviour
 {
 	public AudioSource audioData;

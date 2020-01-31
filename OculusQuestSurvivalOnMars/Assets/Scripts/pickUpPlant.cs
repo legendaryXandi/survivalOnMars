@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Let's the player pick up plants. Once it has been detected as edible, he can store it.
+*/
 public class pickUpPlant : MonoBehaviour
 {
 	

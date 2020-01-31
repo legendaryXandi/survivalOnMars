@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+This script is responsible for opening and closing doors.
+*/
 public class doorOpener : MonoBehaviour
 {
     public GameObject door;
@@ -33,6 +36,7 @@ public class doorOpener : MonoBehaviour
 				moveNow = true;
 			}			
 		}else if(moveNow){
+			//open the door
 			if(!door.GetComponent<doorState>().isOpen){
 				door.transform.Translate(Vector3.up*Time.deltaTime*3);
 				if(door.transform.position.y >= 12.45f){
@@ -44,6 +48,7 @@ public class doorOpener : MonoBehaviour
 					radiationSlider.GetComponent<Slider>().doorClosed = false;
 					moveNow = false;
 				}
+			//close the door
 			}else{
 				door.transform.Translate(Vector3.down*Time.deltaTime*3);
 				if(door.transform.position.y <= door.GetComponent<doorState>().defaultPositionY){

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Removed from the actual game! Let's the player pick up the walkie talkie which plays tasks in form of a female voice to the player.
+*/
 public class pickUpWalki : MonoBehaviour
 {
 	

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This class enables and disables the weak storm effect. If the player goes outside it starts, if he goes back inside it stops.
+*/
 public class enableDisableStormWeak : MonoBehaviour
 {
 	

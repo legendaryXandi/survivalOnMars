@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+This class let's the alarm go off when the radiation is too high or the oxygen is too low.
+*/
 public class checkSliderValueForAlarm : MonoBehaviour
 {
     public AudioSource alarm;

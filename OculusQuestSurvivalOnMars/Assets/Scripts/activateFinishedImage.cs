@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/*
+This class activates an image, when the player has completed the corresponding mission.
+*/
 public class activateFinishedImage : MonoBehaviour
 {
     public bool afterPlant;

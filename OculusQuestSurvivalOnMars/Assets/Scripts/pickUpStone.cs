@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Let's the player pick up the stone and store it.
+*/
 public class pickUpStone : MonoBehaviour
 {	
 	private OVRGrabbable ovrGrabbable;

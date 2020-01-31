@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+This class toggles the state, if the player is inside or outside.
+*/
 public class toggleInsideOutside : MonoBehaviour
 {
 	public GameObject oxygenSlider;
